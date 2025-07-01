@@ -1,6 +1,6 @@
 public class reverse_integer {
     public static void main(String[] args) {
-        int num = -123;
+        int num = 9910;
         int ans = 0;
         int rem = 0;
         boolean isNeg = false;
