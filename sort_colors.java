@@ -8,6 +8,7 @@ public class sort_colors {
                     int temp = color[i];
                     color[i] = color[j];
                     color[j] = temp;
+                    color[j] = temp;
                 }
             }
         }
