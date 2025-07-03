@@ -6,10 +6,10 @@
 // }
 
 // export default apiConfig;
-const fetchData=async()=>{
+const fetchData = async () => {
     const url = "https://api.themoviedb.org/3/movie/popular?api_key=f08d272a5b9323b8122f1f7abd488b67"
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data)
+    console.log(data?.total_results)
 }
 fetchData()
