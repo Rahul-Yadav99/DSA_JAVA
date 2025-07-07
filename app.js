@@ -8,3 +8,11 @@ if (typeof userData.age == "number") {
 } else {
     console.log("age is not a number")
 }
+
+var a = 1
+var b = 12
+if (a == 1 || b == 1) {
+    console.log("a and b are equal")
+} else {
+    console.log("a and b are not equal")
+}
