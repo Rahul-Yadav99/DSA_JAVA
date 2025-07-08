@@ -16,3 +16,7 @@ if (a == 1 || b == 1) {
 } else {
     console.log("a and b are not equal")
 }
+
+if(userData.name==="Rahul"){
+    console.log("Name is present in our DB");
+}

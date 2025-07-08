@@ -8,7 +8,7 @@ public class fizzbuzz {
         } else if (n % 5 == 0) {
             System.out.println("buzz");
         } else {
-            System.out.println(n); // if not divisible by 3 or 5
+            System.out.println(n);
         }
     }
 }
