@@ -1,6 +1,6 @@
 public class countVowelsInString {
     public static void main(String[] args) {
-        String str = "hello world";
+        String str = "Hello world";
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
             char ch = Character.toLowerCase(str.charAt(i));
@@ -13,5 +13,7 @@ public class countVowelsInString {
         } else {
             System.out.println("No Vowels are present in this given String");
         }
+        System.out.println((5<<2));
+        System.out.println((5>>2));
     }
 }
