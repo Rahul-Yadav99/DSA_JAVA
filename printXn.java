@@ -1,9 +1,14 @@
 public class printXn {
     public static void main(String[] args) {
-        int res = 1;
-        for (int i = 1; i <= 10; i++) {
-            res = 2 * res;
+        int x = 25;
+        int n = 10;
+        System.out.println(print(x, n));
+    }
+
+    public static int print(int x, int n) {
+        if (n == 0) {
+            return 1;
         }
-        System.out.println(res);
+        return x * print(x, n - 1);
     }
 }
