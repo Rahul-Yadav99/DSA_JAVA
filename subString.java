@@ -9,7 +9,6 @@ public class subString {
 
     public static void main(String[] args) {
         String str = "HelloWorld";
-        System.out.println(str.substring(0, 5));
-        System.out.println(subStringg(str, 0, 7));
+        System.out.println(subStringg(str, 0, 10));
     }
 }

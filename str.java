@@ -1,26 +1,29 @@
-import java.util.Scanner;
-
 public class str {
-    public static void printLetters(String str) {
-        for (int i = 0; i < str.length(); i++) {
-            System.out.print(str.charAt(i) + " ");
+    public static void main(String[] args) {
+        // printAllSubStrings("abc");
+        System.out.println(indexOfSubstring("rahul", "l"));
+    }
+
+    public static void printAllSubStrings(String str) {
+        for (int si = 0; si < str.length(); si++) {
+            for (int ei = si + 1; ei <= str.length(); ei++) {
+                System.out.println(str.substring(si, ei));
+            }
         }
     }
 
-    public static void main(String[] args) {
-        // char arr[] = { 'a', 'b', 'c' };
-        // String str = "rahul";
-        // String str2 = new String("yadav");
-        // Scanner sc = new Scanner(System.in);
-        // String name;
-        // name = sc.nextLine();
-        // System.out.println(name);
-        // String fullName, LastName;
-        // System.out.println(fullName.length());
-        // fullName = "Rahul";
-        // LastName = "Yadav";
-        // System.out.println(fullName.charAt(0) + " " + LastName.charAt(0));
-        String str = "Rahul Yadav";
-        printLetters(str);
+    public static int indexOfSubstring(String main, String sub) {
+        for (int i = 0; i <= main.length() - sub.length(); i++) {
+            int j;
+            for (j = 0; j < sub.length(); j++) {
+                if (main.charAt(i + j) != sub.charAt(j)) {
+                    break;
+                }
+            }
+            if (j == sub.length()) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
