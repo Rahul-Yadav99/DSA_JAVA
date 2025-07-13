@@ -1,7 +1,8 @@
 public class str {
     public static void main(String[] args) {
         // printAllSubStrings("abc");
-        System.out.println(indexOfSubstring("rahul", "l"));
+        // System.out.println(indexOfSubstring("rahul", "l"));
+        printSubString("main", "sub");
     }
 
     public static void printAllSubStrings(String str) {
@@ -25,5 +26,22 @@ public class str {
             }
         }
         return -1;
+    }
+
+    public static void printSubString(String main, String sub) {
+        int m = main.length();
+        int n = sub.length();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i <= m - n; i++) {
+            int j;
+            for (j = 0; j < n; j++) {
+                if (main.charAt(i + j) != sub.charAt(j)) {
+                    break;
+                }else{
+                    sb.append(main.charAt(i));
+                }
+            }
+        }
+        System.out.println(sb);
     }
 }
