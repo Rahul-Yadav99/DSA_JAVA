@@ -16,36 +16,61 @@ public class divideNconqure {
         if (si >= ei) {
             return;
         }
+
         int mid = si + (ei - si) / 2;
-        mergeSort(arr, si, mid); // left
-        mergeSort(arr, mid + 1, ei); // right
+
+        // sort left half
+        mergeSort(arr, si, mid);
+        // sort right half
+        mergeSort(arr, mid + 1, ei);
+        // merge them
         merge(arr, si, mid, ei);
     }
 
     public static void merge(int arr[], int si, int mid, int ei) {
-        int temp[] = new int[ei - si + 1];
-        int i = si;
-        int j = mid + 1;
-        int k = 0;
+        int len1 = mid - si + 1;
+        int len2 = ei - mid;
 
-        while (i <= mid && j <= ei) {
-            if (arr[i] < arr[j]) {
-                temp[k++] = arr[i++];
+        int leftArr[] = new int[len1];
+        int rightArr[] = new int[len2];
+
+        // copy left side
+        for (int i = 0; i < len1; i++) {
+            leftArr[i] = arr[si + i];
+        }
+
+        // copy right side
+        for (int i = 0; i < len2; i++) {
+            rightArr[i] = arr[mid + 1 + i];
+        }
+
+        // merge logic
+        int i = 0, j = 0, k = si;
+
+        while (i < len1 && j < len2) {
+            if (leftArr[i] <= rightArr[j]) {
+                arr[k] = leftArr[i];
+                k++;
+                i++;
             } else {
-                temp[k++] = arr[j++];
+                arr[k] = rightArr[j];
+                k++;
+                j++;
             }
         }
 
-        while (i <= mid) {
-            temp[k++] = arr[i++];
+        // copy remaining elements of leftArr
+        while (i < len1) {
+            arr[k] = leftArr[i];
+            k++;
+            i++;
         }
 
-        while (j <= ei) {
-            temp[k++] = arr[j++];
-        }
-
-        for (k = 0, i = si; k < temp.length; k++, i++) {
-            arr[i] = temp[k];
+        // copy remaining elements of rightArr
+        while (j < len2) {
+            arr[k] = rightArr[j];
+            k++;
+            j++;
         }
     }
 }
