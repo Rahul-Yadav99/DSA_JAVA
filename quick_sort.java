@@ -1,19 +1,40 @@
-
-import java.util.Arrays;
-
 public class quick_sort {
     public static void main(String[] args) {
-        int arr[] = { 8, 1, 3, 4, 20, 30, 50 };
-        int piv = 0;
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[piv] > arr[i]) {
-                int temp = arr[piv];
-                arr[piv] = arr[count];
-                arr[count] = temp;
-            }
-            count++;
+        int arr[] = { 3, 2, 1, 5, 4 };
+
+        quickSort(arr, 0, arr.length - 1);
+
+        for (int i : arr) {
+            System.out.print(i + " ");
         }
-        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void quickSort(int arr[], int start, int end) {
+        if (end <= start) {
+            return;
+        }
+
+        int pivot = prtition(arr, start, end);
+        quickSort(arr, start, pivot - 1);
+        quickSort(arr, pivot + 1, end);
+    }
+
+    public static int prtition(int arr[], int start, int end) {
+        int pivot = arr[end];
+        int i = start - 1;
+
+        for (int j = start; j < end; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        i++;
+        int temp = arr[i];
+        arr[i] = arr[end];
+        arr[end] = temp;
+        return i;
     }
 }
