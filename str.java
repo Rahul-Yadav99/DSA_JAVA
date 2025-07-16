@@ -2,7 +2,7 @@ public class str {
     public static void main(String[] args) {
         // printAllSubStrings("abc");
         // System.out.println(indexOfSubstring("rahul", "l"));
-        printSubString("main", "sub");
+        printSubString("main", "a");
     }
 
     public static void printAllSubStrings(String str) {

@@ -1,7 +1,7 @@
 public class printXn {
     public static void main(String[] args) {
-        int x = 25;
-        int n = 10;
+        int x = 2;
+        int n = 2;
         System.out.println(print(x, n));
     }
 
