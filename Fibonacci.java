@@ -12,6 +12,8 @@ public class Fibonacci {
         int findPower = powerOfN(10);
         System.out.println(findPower);
         printNaturalNum(n);
+        System.out.println();
+        fun(n);
     }
 
     public static int fib(int n) {
@@ -54,10 +56,19 @@ public class Fibonacci {
 
     public static void printNaturalNum(int n) {
         if (n == 1) {
-            System.out.print(n+" ");
+            System.out.print(n + " ");
             return;
         }
         printNaturalNum(n - 1);
-        System.out.print(n+" ");
+        System.out.print(n + " ");
+    }
+
+    public static void fun(int n) {
+        if (n == 1) {
+            System.out.print(n + " ");
+            return;
+        }
+        System.out.print(n + " ");
+        fun(n - 1);
     }
 }
