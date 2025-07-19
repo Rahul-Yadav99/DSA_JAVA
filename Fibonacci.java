@@ -1,7 +1,7 @@
 public class Fibonacci {
     public static void main(String[] args) {
-        int n = 11;
-        int x = 4;
+        int n = 4;
+        int x = 14;
         String str = "rahul";
         int result = fib(x);
         System.out.println("Fibonacci number at position " + x + " is: " + result);
@@ -14,6 +14,8 @@ public class Fibonacci {
         printNaturalNum(n);
         System.out.println();
         fun(n);
+        System.out.println();
+        printMulti(2, 10);
     }
 
     public static int fib(int n) {
@@ -38,7 +40,6 @@ public class Fibonacci {
     }
 
     public static String revString(String str) {
-
         // base case
         if (str.length() == 1 || str.length() == 0) {
             return str;
@@ -71,4 +72,14 @@ public class Fibonacci {
         System.out.print(n + " ");
         fun(n - 1);
     }
+
+    // 12 24 36 48 60
+    public static void printMulti(int num, int k) {
+        if (num == 0 || k == 0) {
+            return;
+        }
+        printMulti(num, k - 1);
+        System.out.print((num * k) + " ");
+    }
+
 }
