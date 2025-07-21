@@ -1,25 +1,4 @@
 public class Fibonacci {
-    public static void main(String[] args) {
-        int n = 10;
-        int x = 14;
-        String str = "rahul";
-        int result = fib(x);
-        System.out.println("Fibonacci number at position " + x + " is: " + result);
-        int sum = sumOfDigit(n);
-        System.out.println("sum " + sum);
-        String res = revString(str);
-        System.out.println(res);
-        int findPower = powerOfN(10);
-        System.out.println(findPower);
-        printNaturalNum(n);
-        System.out.println();
-        fun(n);
-        System.out.println();
-        printMulti(5, 1);
-        System.out.println();
-        int al = alternateSigns(n);
-        System.out.println(al);
-    }
 
     public static int fib(int n) {
         // f(n) = f(n-1) + f(n-2)
@@ -96,5 +75,11 @@ public class Fibonacci {
         } else {
             return alternateSigns(n - 1) + n;
         }
+    }
+
+    public static void main(String[] args) {
+        int n = 50;
+        int al = alternateSigns(n);
+        System.out.println(al);
     }
 }
