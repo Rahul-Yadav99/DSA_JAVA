@@ -29,10 +29,17 @@ public class arrWithRec {
         sumOfElements(arr, i + 1, sum);
     }
 
+    public static void printSortedArr(int arr[], int i) {
+        if (i >= arr.length) {
+            return;
+        }
+        
+    }
+
     public static void main(String[] args) {
         int arr[] = { 1, 2, 1, 3 };
-        int max = Integer.MIN_VALUE;
-        int sum = 0;
-        sumOfElements(arr, 0, sum);
+        // int max = Integer.MIN_VALUE;
+        // int sum = 0;
+        printSortedArr(arr, 0);
     }
 }
