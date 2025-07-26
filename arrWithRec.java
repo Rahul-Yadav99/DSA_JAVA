@@ -33,11 +33,11 @@ public class arrWithRec {
         if (i >= arr.length) {
             return;
         }
-        
+
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 1, 3 };
+        int arr[] = { 1, 2, 1, 3, 4 };
         // int max = Integer.MIN_VALUE;
         // int sum = 0;
         printSortedArr(arr, 0);
