@@ -30,9 +30,6 @@ public class arrWithRec {
     }
 
     public static void printSortedArr(int arr[], int i) {
-        if (i >= arr.length) {
-            return;
-        }
 
     }
 
