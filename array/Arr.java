@@ -1,11 +1,8 @@
-
 public class Arr {
-
     public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5};
-        for (int number : numbers) {
-            System.out.print(number);
-            System.out.print(" ");
+        int n = 10;
+        for (int i = 1; i < n; i++) {
+            System.out.print(i);
         }
     }
 }
