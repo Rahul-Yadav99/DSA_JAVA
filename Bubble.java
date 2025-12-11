@@ -1,20 +1,18 @@
 public class Bubble {
     public static void main(String[] args) {
-        int[] arr = { 4, 6, 2, 6, 8 };
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - i - 1; j++) {
-
+        int[] arr = { 2, 3, 5, 4, 1 };
+        for (int turn = 0; turn < arr.length - 1; turn++) {
+            for (int j = 0; j < arr.length - 1 - turn; j++) {
                 if (arr[j] > arr[j + 1]) {
+                    // Swap the elements
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
             }
         }
-
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int i : arr) {
+            System.out.print(i + " ");
         }
     }
 }
