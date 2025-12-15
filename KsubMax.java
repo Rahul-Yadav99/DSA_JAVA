@@ -4,7 +4,7 @@ public class KsubMax {
 
     public static ArrayList<Integer> maxOfSubarrays(int[] arr, int k) {
         ArrayList<Integer> res = new ArrayList<>();
-        System.out.println(arr.length);
+        
         if (k == 1) {
             for (int i : arr) {
                 res.add(i);
