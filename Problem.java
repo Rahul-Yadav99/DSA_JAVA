@@ -83,9 +83,24 @@ public class Problem {
         }
     }
 
+    static void sumOFSubarr(int[] nums) {
+        int k = 3;
+        int win_sum = 0;
+        int max_sum = Integer.MIN_VALUE;
+        for (int i = 0; i < k; i++) {
+            win_sum = win_sum + nums[i];
+        }
+        max_sum = win_sum;
+        for (int i = k; i < nums.length; i++) {
+            win_sum = win_sum - nums[i - k] + nums[i];
+            max_sum = Math.max(max_sum, win_sum);
+        }
+        System.out.println(max_sum);
+    }
+
     public static void main(String[] args) {
         // find the min element in this given array and return the index of the element
         int[] nums = { 3, 4, 5, 1, 2 };
-        bubbleSort(nums);
+        sumOFSubarr(nums);
     }
 }
