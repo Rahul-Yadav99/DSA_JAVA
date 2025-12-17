@@ -98,9 +98,20 @@ public class Problem {
         System.out.println(max_sum);
     }
 
+    public static void printMaxElementInSubarr(int[] nums) {
+        int k = 3;
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < k; i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+        }
+        System.out.println(max);
+    }
+
     public static void main(String[] args) {
         // find the min element in this given array and return the index of the element
         int[] nums = { 3, 4, 5, 1, 2 };
-        sumOFSubarr(nums);
+        printMaxElementInSubarr(nums);
     }
 }
