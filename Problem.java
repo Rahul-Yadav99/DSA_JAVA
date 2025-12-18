@@ -111,7 +111,7 @@ public class Problem {
 
     public static void main(String[] args) {
         // find the min element in this given array and return the index of the element
-        int[] nums = { 3, 4, 15, 1, 2 };
+        int[] nums = { 3, 4, 5, 1, 2 };
         printMaxElementInSubarr(nums);
     }
 }
