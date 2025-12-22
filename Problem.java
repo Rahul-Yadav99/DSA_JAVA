@@ -112,6 +112,9 @@ public class Problem {
     public static void main(String[] args) {
         // find the min element in this given array and return the index of the element
         int[] nums = { 3, 4, 5, 1, 12, 6 };
-        printMaxElementInSubarr(nums);
+        // printMaxElementInSubarr(nums);
+        for (int i = 0; i <= 1000000; i++) {
+            System.out.println(i);
+        }
     }
 }
